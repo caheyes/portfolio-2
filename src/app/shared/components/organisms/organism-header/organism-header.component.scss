@@ -1,0 +1,27 @@
+@import 'assets/scss/index';
+
+.o-header {
+  @include container(1240);
+  display: grid;
+  grid-auto-flow: column;
+  place-content: space-between;
+  place-items: center;
+
+  gap: 20px;
+
+  &__title {
+    font-size: 42px;
+    font-family: 'FiraSans-ExtraBold';
+  }
+
+  &__nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+
+    &__link {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  }
+}
