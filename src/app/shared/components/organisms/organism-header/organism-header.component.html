@@ -1,15 +1,19 @@
-<header class="o-header" [class.o-header--scrolled]="scrolled || showMenu">
+<header class="o-header" [class.o-header--scrolled]="scrolled || showMenu || darkMode">
   <div class="o-header__content">
     <button class="o-header__content__button" (click)="openMenu()">
       @if (showMenu) {
-      <icon-close [fill]="scrolled || showMenu ? '#fff' : '#000'" />
+      <icon-close [fill]="getFillColor()" />
       } @else {
-      <icon-menu [stopColor]="scrolled || showMenu ? '#fff' : '#000'" />
+      <icon-menu [stopColor]="getFillColor()" />
       }
     </button>
     <h1 class="o-header__content__title">Caroline</h1>
-    <button class="o-header__content__button">
-      <icon-menu [stopColor]="scrolled || showMenu ? '#fff' : '#000'" />
+    <button class="o-header__content__button" (click)="activeDarkMode()">
+      @if (darkMode) {
+      <icon-moon [fill]="getFillColor()" />
+      } @else {
+      <icon-sun [fill]="getFillColor()" />
+      }
     </button>
   </div>
 </header>

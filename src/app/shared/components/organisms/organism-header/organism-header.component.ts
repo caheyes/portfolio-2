@@ -1,18 +1,33 @@
-import { Component, HostListener  } from '@angular/core';
+import { Component, HostListener, OnInit  } from '@angular/core';
+import { DarkModeService } from '../../../../core/services/dark-mode.service';
+//components
 import { AtomMenuComponent } from '../../atoms/atom-menu/atom-menu.component';
 import { IconMenuComponent } from '../../../../../assets/images/icons/iconMenu/icon-menu.component';
 import { IconCloseComponent } from '../../../../../assets/images/icons/iconClose/icon-close.component';
+import { IconSunComponent } from '../../../../../assets/images/icons/iconSun/icon-sun.component';
+import { IconMoonComponent } from '../../../../../assets/images/icons/iconMoon/icon-moon.component';
 
 @Component({
   selector: 'organism-header',
   standalone: true,
-  imports: [IconMenuComponent, IconCloseComponent, AtomMenuComponent],
+  imports: [IconMenuComponent, IconSunComponent, IconMoonComponent, IconCloseComponent, AtomMenuComponent],
   templateUrl: './organism-header.component.html',
   styleUrl: './organism-header.component.scss'
 })
-export class OrganismHeaderComponent {
+export class OrganismHeaderComponent implements OnInit {
+
   public scrolled = false;
   public showMenu = false;
+  public darkMode = false;
+
+  constructor(private darkModeService: DarkModeService) {}
+
+  ngOnInit(): void {
+    this.darkModeService.darkMode$.subscribe((isDark) => {
+      this.darkMode = isDark;
+      document.body.classList.toggle('dark-mode', isDark);
+    })
+  }
 
   @HostListener('window:scroll', [])
 
@@ -24,6 +39,15 @@ export class OrganismHeaderComponent {
   //methods
   openMenu() {
     this.showMenu = !this.showMenu;
+  }
+
+  activeDarkMode() {
+    this.darkModeService.setDarkMode(!this.darkMode);
+  }
+
+  //util
+  getFillColor(): string {
+    return this.scrolled || this.showMenu || this.darkMode ? '#fff' : '#000';
   }
 
 }
