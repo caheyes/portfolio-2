@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit  } from '@angular/core';
+import { Component, HostListener, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { DarkModeService } from '../../../../core/services/dark-mode.service';
 //components
 import { AtomMenuComponent } from '../../atoms/atom-menu/atom-menu.component';
@@ -20,13 +21,19 @@ export class OrganismHeaderComponent implements OnInit {
   public showMenu = false;
   public darkMode = false;
 
-  constructor(private darkModeService: DarkModeService) {}
+  constructor(
+    private darkModeService: DarkModeService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
-    this.darkModeService.darkMode$.subscribe((isDark) => {
-      this.darkMode = isDark;
-      document.body.classList.toggle('dark-mode', isDark);
-    })
+     // Apenas executa no navegador
+    if (isPlatformBrowser(this.platformId)) {
+      this.darkModeService.darkMode$.subscribe((isDark) => {
+        this.darkMode = isDark;
+        document.body.classList.toggle('dark-mode', isDark);
+      })
+    }
   }
 
   @HostListener('window:scroll', [])
