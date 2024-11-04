@@ -1,27 +1,48 @@
 @import 'assets/scss/index';
 
 .o-header {
-  @include container(1240);
-  display: grid;
-  grid-auto-flow: column;
-  place-content: space-between;
-  place-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 40px 0;
 
-  gap: 20px;
-
-  &__title {
-    font-size: 42px;
-    font-family: 'FiraSans-ExtraBold';
-  }
-
-  &__nav {
+  &__content {
+    @include container(1240);
     display: grid;
     grid-auto-flow: column;
-    gap: 10px;
+    place-content: space-between;
+    place-items: center;
 
-    &__link {
-      padding: 10px 20px;
-      font-size: 18px;
+    gap: 20px;
+
+    &__button {
+      @include btn-icon();
+    }
+
+    &__title {
+      @include font-title(42, 'FiraSans-ExtraBold', $black);
+    }
+
+    &__nav {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 10px;
+
+      &__link {
+        padding: 10px 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &--scrolled {
+    background-color: $primary;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.06);
+
+    .o-header__content__title {
+      @include font-title(42, 'FiraSans-ExtraBold', $font-suport-white);
     }
   }
 }

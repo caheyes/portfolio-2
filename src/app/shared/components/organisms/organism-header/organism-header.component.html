@@ -1,10 +1,16 @@
-<section class="o-header">
-  <h1 class="o-header__title">Caroline</h1>
-  <nav class="o-header__nav">
-    <a class="o-header__nav__link" href="#">Experiência</a>
-    <a class="o-header__nav__link" href="#">Formação</a>
-    <a class="o-header__nav__link" href="#">Habilidades</a>
-    <a class="o-header__nav__link" href="#">Projetos</a>
-    <a class="o-header__nav__link" href="#">Contato</a>
-  </nav>
-</section>
+<header class="o-header" [class.o-header--scrolled]="scrolled || showMenu">
+  <div class="o-header__content">
+    <button class="o-header__content__button" (click)="openMenu()">
+      @if (showMenu) {
+      <icon-close [fill]="scrolled || showMenu ? '#fff' : '#000'" />
+      } @else {
+      <icon-menu [stopColor]="scrolled || showMenu ? '#fff' : '#000'" />
+      }
+    </button>
+    <h1 class="o-header__content__title">Caroline</h1>
+    <button class="o-header__content__button">
+      <icon-menu [stopColor]="scrolled || showMenu ? '#fff' : '#000'" />
+    </button>
+  </div>
+</header>
+<atom-menu [showMenu]="showMenu" />

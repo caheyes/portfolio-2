@@ -1,0 +1,23 @@
+@mixin font-title(
+  $size: 42, 
+  $font: 'FiraSans-Bold', 
+  $color: $black, 
+  $align: left
+) {
+  font-family: $font;
+  font-size: rem($size);
+  color: $color;
+  text-align: $align;
+}
+
+@mixin font-custom(
+  $size: 37, 
+  $font: 'FireSans-Regular', 
+  $color: $black, 
+  $align: left
+) {
+  font-family: $font;
+  font-size: rem($size);
+  color: $color;
+  text-align: $align;
+}
