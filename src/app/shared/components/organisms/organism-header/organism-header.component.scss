@@ -9,7 +9,7 @@
   padding: 40px 0;
 
   &__content {
-    @include container(1240);
+    @include container();
     display: grid;
     grid-auto-flow: column;
     place-content: space-between;
@@ -38,7 +38,7 @@
   }
 
   &--scrolled {
-    background-color: $primary;
+    background-color: $black-10;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.06);
 
     .o-header__content__title {

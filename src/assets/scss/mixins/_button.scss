@@ -6,3 +6,37 @@
     transform: scale(1.2);
   }
 }
+
+@mixin btn-primary() {
+  min-width: 192px;
+  padding: 10px 22px;;
+  border-radius: 5px;
+  background: $primary;
+  font-size: 24px;
+  color: $font-suport-white;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    background: $primary-010;
+  }
+}
+
+@mixin btn-secondary() {
+  min-width: 192px;
+  padding: 10px 22px;
+  border-radius: 5px;
+  background: $secondary;
+  font-size: 24px;
+  color: $font-suport-white;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    background: $secondary-010;
+  }
+}

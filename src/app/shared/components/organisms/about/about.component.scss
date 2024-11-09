@@ -1,0 +1,47 @@
+@import 'assets/scss/index';
+
+.a-about {
+  &__content {
+    @include container();
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 20px;
+    &__img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+    }
+
+    &__description {
+      h2 {
+        position: relative;
+        @include font-title(48, FiraSans-ExtraBold);
+        margin-bottom: 30px;
+        &::before {
+          @include flag();
+        }
+      }
+
+      p {
+        font-size: rem(24);
+        margin-bottom: 30px;
+      }
+
+      &__actions {
+        display: grid;
+        grid-auto-flow: column;
+        place-content: start;
+        gap: 30px;
+
+        &__download {
+          @include btn-primary();
+        }
+        &__linkedin {
+          @include btn-secondary();
+        }
+      }
+    }
+  }
+}
