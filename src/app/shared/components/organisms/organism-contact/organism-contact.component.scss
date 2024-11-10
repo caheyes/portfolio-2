@@ -1,0 +1,58 @@
+@import 'assets/scss/index';
+
+.o-contact {
+  background: $black-10;
+  &__content {
+    position: relative;
+    @include container();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+    padding: 120px 20px 60px 20px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    &::before {
+      top: -5px;
+      @include flag(-50, 0, 1);
+    }
+
+    &__description {
+      @include font-custom(24, 'FireSans-Regular', $font-suport-5);
+
+      @media (max-width: $tablet) {
+        @include font-custom(18, 'FireSans-Regular', $font-suport-5);
+      }
+    }
+
+    &__links {
+      display: grid;
+      gap: 30px;
+
+      @media (max-width: $tablet) {
+        place-content: center;
+      }
+
+      a {
+        display: grid;
+        grid-auto-flow: column;
+        place-content: start;
+        place-items: center;
+        gap: 12px;
+
+        p {
+          @include font-custom(28, 'FiraSans-SemiBold', $white);
+          margin: 0;
+
+          @media (max-width: $tablet) {
+            @include font-custom(18, 'FiraSans-SemiBold', $white);
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,16 +7,20 @@
   padding: 40px 20px;
 }
 
-@mixin flag() {
+@mixin flag(
+  $top: -15,
+  $left: -40,
+  $zIndex: -1
+) {
   content: "";
   display: block;
   width: 130px;
   height: 100px;
   background: url('../../images/icons/svg/iconFlag.svg') no-repeat center;
   position: absolute;
-  top: -15px;
-  left: -40px;
-  z-index: -1;
+  top: $top + px;
+  left:  $left + px;
+  z-index: $zIndex;
 }
 
 @mixin min-flag() {
