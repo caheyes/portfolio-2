@@ -1,3 +1,19 @@
+@mixin font-title-page(
+  $size: 128, 
+  $font: 'FiraSans-ExtraBold', 
+  $color: $font-suport-6, 
+  $align: left
+) {
+  font-family: $font;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 4ch;
+  font-size: rem($size);
+  color: $color;
+  text-align: $align;
+}
+
 @mixin font-title(
   $size: 42, 
   $font: 'FiraSans-Bold', 

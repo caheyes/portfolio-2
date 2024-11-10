@@ -18,3 +18,14 @@
   left: -40px;
   z-index: -1;
 }
+
+@mixin min-flag() {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient($primary-010, $primary);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}

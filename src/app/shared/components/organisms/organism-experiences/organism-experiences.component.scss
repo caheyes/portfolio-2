@@ -1,0 +1,24 @@
+@import 'assets/scss/index';
+
+.o-experiences {
+  &__content {
+    @include container();
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+
+    h3 {
+      @include font-title-page();
+    }
+
+    &__block {
+      &__description {
+        font-size: rem(24);
+        margin-bottom: 60px;
+        strong {
+          color: $black;
+        }
+      }
+    }
+  }
+}
