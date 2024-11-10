@@ -7,8 +7,10 @@
   }
 }
 
-@mixin btn-primary() {
-  min-width: 192px;
+@mixin btn-primary(
+  $min-width: 192px,
+) {
+  min-width: $min-width;
   padding: 10px 22px;;
   border-radius: 5px;
   background: $primary;
@@ -24,8 +26,10 @@
   }
 }
 
-@mixin btn-secondary() {
-  min-width: 192px;
+@mixin btn-secondary(
+  $min-width: 192px,
+  ) {
+  min-width: $min-width;
   padding: 10px 22px;
   border-radius: 5px;
   background: $secondary;

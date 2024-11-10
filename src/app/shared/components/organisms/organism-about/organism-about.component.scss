@@ -8,10 +8,20 @@
     align-items: center;
     gap: 100px;
 
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      place-items: center;
+      gap: 60px;
+    }
+
     &__img {
-      width: 350px;
-      height: 350px;
+      max-width: 350px;
+      width: 100%;
       border-radius: 50%;
+
+      @media (max-width: $tablet) {
+        max-width: 200px;
+      }
     }
 
     &__description {
@@ -35,11 +45,24 @@
         place-content: start;
         gap: 30px;
 
+        @media (max-width: $tablet) {
+          grid-template-columns: 1fr;
+          grid-auto-flow: initial;
+        }
+
         &__download {
           @include btn-primary();
+
+          @media (max-width: $tablet) {
+            @include btn-primary(0);
+          }
         }
         &__linkedin {
           @include btn-secondary();
+
+          @media (max-width: $tablet) {
+            @include btn-secondary(0);
+          }
         }
       }
     }
