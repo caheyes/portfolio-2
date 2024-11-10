@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './icon-moon.component.html',
 })
 export class IconMoonComponent {
-  @Input() fill: string = '#000';
+  @Input() fill: string = '#141414';
 }

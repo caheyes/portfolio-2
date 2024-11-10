@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './icon-sun.component.html',
 })
 export class IconSunComponent {
-  @Input() fill: string = '#000';
+  @Input() fill: string = '#141414';
 }

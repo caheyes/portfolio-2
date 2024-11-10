@@ -17,7 +17,7 @@
 @mixin font-title(
   $size: 42, 
   $font: 'FiraSans-Bold', 
-  $color: $black, 
+  $color: $font-suport-1, 
   $align: left
 ) {
   font-family: $font;

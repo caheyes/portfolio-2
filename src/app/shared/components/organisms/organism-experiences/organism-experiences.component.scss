@@ -7,16 +7,30 @@
     grid-template-columns: 1fr 2fr;
     gap: 100px;
 
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
     h3 {
-      @include font-title-page();
+      @include font-title();
+
+      @media (min-width: $tablet) {
+        @include font-title-page();
+      }
     }
 
     &__block {
       &__description {
         font-size: rem(24);
         margin-bottom: 60px;
+
+        @media (max-width: $tablet) {
+          font-size: rem(18);
+        }
+
         strong {
-          color: $black;
+          color: $font-suport-1;
         }
       }
     }

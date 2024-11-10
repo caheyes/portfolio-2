@@ -21,7 +21,7 @@
     }
 
     &__title {
-      @include font-title(42, 'FiraSans-ExtraBold', $black);
+      @include font-title(42, 'FiraSans-ExtraBold', $font-suport-1);
     }
 
     &__nav {
