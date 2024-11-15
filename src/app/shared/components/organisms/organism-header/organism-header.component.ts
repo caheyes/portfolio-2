@@ -3,10 +3,10 @@ import { isPlatformBrowser } from '@angular/common';
 import { DarkModeService } from '../../../../core/services/dark-mode.service';
 //components
 import { AtomMenuComponent } from '../../atoms/atom-menu/atom-menu.component';
-import { IconMenuComponent } from '../../../../../assets/images/icons/iconMenu/icon-menu.component';
-import { IconCloseComponent } from '../../../../../assets/images/icons/iconClose/icon-close.component';
-import { IconSunComponent } from '../../../../../assets/images/icons/iconSun/icon-sun.component';
-import { IconMoonComponent } from '../../../../../assets/images/icons/iconMoon/icon-moon.component';
+import { IconMenuComponent } from '../../../../../assets/files/images/icons/iconMenu/icon-menu.component';
+import { IconCloseComponent } from '../../../../../assets/files/images/icons/iconClose/icon-close.component';
+import { IconSunComponent } from '../../../../../assets/files/images/icons/iconSun/icon-sun.component';
+import { IconMoonComponent } from '../../../../../assets/files/images/icons/iconMoon/icon-moon.component';
 
 @Component({
   selector: 'organism-header',
