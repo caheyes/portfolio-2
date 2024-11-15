@@ -1,0 +1,25 @@
+@import 'assets/scss/index';
+
+.o-projects {
+  background: $black-10;
+  &__content {
+    @include container();
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    padding: 120px 20px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    h3 {
+      @include font-title(42, 'FiraSans-Bold', $black);
+
+      @media (min-width: $tablet) {
+        @include font-title-page(128, 'FiraSans-ExtraBold', $black);
+      }
+    }
+  }
+}
