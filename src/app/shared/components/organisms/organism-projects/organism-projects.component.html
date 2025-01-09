@@ -2,7 +2,9 @@
   <div class="o-projects__content">
     <h3>Projetos</h3>
     <div class="o-projects__content__projects">
-      <atom-project />
+      @for(project of listProjects(); track project;) {
+      <atom-project [project]="project" />
+      }
     </div>
   </div>
 </section>

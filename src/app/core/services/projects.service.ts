@@ -7,17 +7,29 @@ import { IProjects } from "../interfaces/IProjects.interface";
 export class ProjectsService {
   public projects = signal<IProjects[]>([
     {
-      img: '',
+      img: 'assets/files/images/projects/bikcraft.png',
       title: 'Bikcraft',
       date: '21 de novembro de 2022',
-      video: '',
+      video: 'assets/files/videos/bikcraft.mp4',
       description: `
       <p>
         Este é um site para encomendas de bicicletas feitas a mão. É um projeto final do curso Web Design da Origamid, onde tive oportunidade de colocar em prática UX/UI Design, Adobe XD, Semântica, SEO, Grid, Reset, Responsividade, Animações, Domínio, hospedagem e muito mais.
       </p>
       `,
-      // links: { text: string, href: string }[],
-      // skills: { text: string, src: string }[]
+      links: [
+        {
+          text: 'Conheça o site',
+          href: 'https://caheyes.github.io/Bikcraft/'
+        },
+        {
+          text: 'Acessar repositório',
+          href: 'https://github.com/caheyes/Bikcraft'
+        },
+      ],
+      skills: [
+        { text: 'Javascript', src: 'assets/files/images/icons/svg/javascript.svg' },
+        { text: 'CSS3', src: 'assets/files/images/icons/svg/css3.svg' },
+      ]
     },
   ])
 }

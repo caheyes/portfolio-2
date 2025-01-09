@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IProjects } from '../../../../core/interfaces/IProjects.interface';
 
 @Component({
   selector: 'atom-project',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './atom-project.component.scss'
 })
 export class AtomProjectComponent {
+  @Input() project: IProjects | null = null;
 
+  constructor () {
+  }
 }
