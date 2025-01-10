@@ -1,7 +1,17 @@
 <div class="a-project">
-  <!-- <img :src="project.img"> -->
-  <div>
-    <!-- <h3>{{project.date}}</h3> -->
-    <div></div>
+  <div class="a-project__board">
+    <img [src]="project.img">
+    <div class="a-project__board__details">
+      <h3 class="a-project__board__details__title">{{project.title}}</h3>
+      <div class="a-project__board__details__skills">
+        @for(skill of project.skills; track skill;) {
+        <img [src]="skill.src" alt="Icone {{skill.text}}" class="a-project__board__details__skills__icon">
+        }
+      </div>
+    </div>
+  </div>
+  <div class="a-project__informations">
+    <span>{{project.date}}</span>
+    <button>Ver mais</button>
   </div>
 </div>

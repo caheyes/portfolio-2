@@ -21,5 +21,11 @@
         @include font-title-page(128, 'FiraSans-ExtraBold', $black);
       }
     }
+
+    &__projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
   }
 }

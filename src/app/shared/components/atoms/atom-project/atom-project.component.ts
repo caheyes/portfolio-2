@@ -9,7 +9,7 @@ import { IProjects } from '../../../../core/interfaces/IProjects.interface';
   styleUrl: './atom-project.component.scss'
 })
 export class AtomProjectComponent {
-  @Input() project: IProjects | null = null;
+  @Input() project!: IProjects;
 
   constructor () {
   }
