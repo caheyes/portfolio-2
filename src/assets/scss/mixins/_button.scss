@@ -66,3 +66,24 @@
     background: $primary;
   }
 }
+
+@mixin btn-round-color(
+  $font-size: 12,
+  $color: $primary,
+  ) {
+  background: $primary;
+  border: 1px solid $primary;
+  border-radius: 20px;
+  font-size: rem($font-size);
+  font-family: 'FireSans-Regular';
+  color: $font-suport-white;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 2px 10px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+

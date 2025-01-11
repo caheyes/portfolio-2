@@ -1,1 +1,28 @@
-<p>molecule-modal-project works!</p>
+@if (modalOpen) {
+<div class="m-modal-project">
+  <div class="m-modal-project__modal">
+    <div class="m-modal-project__modal__header">
+      <button class="m-modal-project__modal__header__close" (click)="closeModal()">
+        <img src="assets/files/images/icons/svg/close.svg" alt="Icone fechar">
+      </button>
+    </div>
+    <div class="m-modal-project__modal__body">
+      <video controls muted autoplay loop>
+        <source [src]="project.video" type="video/mp4">
+      </video>
+      <div class="m-modal-project__modal__body__description">
+        <div class="m-modal-project__modal__body__description__top">
+          <h2 class="m-modal-project__modal__body__description__top__title">{{project.title}}</h2>
+          <span class="m-modal-project__modal__body__description__top__date">{{project.date}}</span>
+        </div>
+        <div [innerHTML]="project.description"></div>
+      </div>
+    </div>
+    <div class="m-modal-project__modal__actions">
+      @for(link of project.links; track link;) {
+      <a [href]="link.href" target="_blank" class="m-modal-project__modal__actions__button">{{link.text}}</a>
+      }
+    </div>
+  </div>
+</div>
+}

@@ -1,7 +1,7 @@
 @mixin font-title-page(
-  $size: 128, 
-  $font: 'FiraSans-ExtraBold', 
-  $color: $font-suport-6, 
+  $size: 128,
+  $font: 'FiraSans-ExtraBold',
+  $color: $font-suport-6,
   $align: left
 ) {
   font-family: $font;
@@ -15,9 +15,21 @@
 }
 
 @mixin font-title(
-  $size: 42, 
-  $font: 'FiraSans-Bold', 
-  $color: $font-suport-1, 
+  $size: 42,
+  $font: 'FiraSans-Bold',
+  $color: $font-suport-1,
+  $align: left
+) {
+  font-family: $font;
+  font-size: rem($size);
+  color: $color;
+  text-align: $align;
+}
+
+@mixin font-title-modal(
+  $size: 34,
+  $font: 'FiraSans-Bold',
+  $color: $primary,
   $align: left
 ) {
   font-family: $font;
@@ -27,9 +39,9 @@
 }
 
 @mixin font-custom(
-  $size: 37, 
-  $font: 'FireSans-Regular', 
-  $color: $black, 
+  $size: 37,
+  $font: 'FireSans-Regular',
+  $color: $black,
   $align: left
 ) {
   font-family: $font;

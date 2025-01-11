@@ -1,4 +1,4 @@
-<div class="a-project">
+<div class="a-project" (click)="controlerModal(true)">
   <div class="a-project__board">
     <img [src]="project.img">
     <div class="a-project__board__details">
@@ -15,3 +15,4 @@
     <button>Ver mais</button>
   </div>
 </div>
+<molecule-modal-project (controlerModal)="controlerModal($event)" [project]="project" [modalOpen]="modalOpen" />

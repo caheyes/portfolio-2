@@ -1,0 +1,88 @@
+@import 'assets/scss/index';
+
+.m-modal-project {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+
+  &__modal {
+    max-width: 1300px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $black-10;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+
+    &__header {
+      display: grid;
+      grid-auto-flow: column;
+      place-content: end;
+      gap: 60px;
+      &__close {
+        :hover {
+          transform: scale(1.4);
+        }
+        img {
+          width: 20px;
+        }
+      }
+    }
+
+    &__body {
+      display: grid;
+      grid-template-columns: 600px 1fr;
+      gap: 40px;
+
+      padding: 30px 20px 0;
+
+      @media (max-width: $min-desktop) {
+        grid-template-columns: 1fr;
+      }
+
+      video {
+        width: 100%;
+      }
+
+      &__description {
+
+        &__top {
+          display: grid;
+          grid-auto-flow: column;
+          place-content: space-between;
+          place-items: center;
+
+          margin-bottom: 12px;
+          &__title {
+            @include font-title-modal();
+          }
+
+          &__date {
+            @include font-custom(14, 'FireSans-Regular', $white);
+          }
+        }
+      }
+    }
+
+    &__actions {
+      display: grid;
+      grid-auto-flow: column;
+      place-content: start;
+      gap: 16px;
+
+      padding: 32px 20px 0;
+
+      &__button {
+        @include btn-round-color(16);
+      }
+    }
+  }
+}
