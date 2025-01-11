@@ -88,6 +88,37 @@ export class ProjectsService {
       ]
     },
     {
+      img: 'assets/files/images/projects/animais-fantasticos.png',
+      title: 'Animais Fantásticos',
+      date: '07 de junho de 2021',
+      video: 'assets/files/videos/animais-fantasticos.mp4',
+      description: `
+      <p>
+        <strong>Animais Fantásticos</strong> foi um projeto criado com o objetivo de aprofundar técnicas avançadas de estilização.
+      </p>
+      <p>
+        O projeto traz uma coleção interativa dos animais mais fascinantes, com um design envolvente e responsivo, pensado para proporcionar uma experiência visual agradável em diferentes dispositivos. Além disso, dediquei atenção especial aos detalhes visuais, combinando cores, tipografia e imagens para criar uma interface que encanta e informa ao mesmo tempo.
+      </p>
+      <p>
+        Este projeto foi uma oportunidade incrível para consolidar minhas habilidades em front-end e explorar minha criatividade ao unir tecnologia e design de forma harmônica.
+      </p>
+      `,
+      links: [
+        {
+          text: 'Conheça o site',
+          href: 'https://caheyes.github.io/Animais_Fantasticos/'
+        },
+        {
+          text: 'Acessar repositório',
+          href: 'https://github.com/caheyes/Animais_Fantasticos'
+        },
+      ],
+      skills: [
+        { text: 'HTML5', src: 'assets/files/images/icons/svg/html5.svg' },
+        { text: 'CSS3', src: 'assets/files/images/icons/svg/css3.svg' },
+      ]
+    },
+    {
       img: 'assets/files/images/projects/snackgame.png',
       title: 'Snack Game',
       date: '08 de dezembro de 2020',
