@@ -24,7 +24,7 @@ export class ExperiencesService {
       title: 'T.group',
       position: 'Desenvolvedora júnior',
       time: '03/2022 - 05/2022',
-      description: 'Desenvolvimento de sistemas web, dividido em vários módulos de entrega, telas responsivas para diversos dispositivos mobile, integração de APIs, utilização de metodologias ágeis, scrum e kanban.',
+      description: 'Atuava na manutenção e evolução de sistema, garantindo a consistência e a qualidade dos produtos já desenvolvidos, após a transição para um novo CNPJ que se tornou a empresa GregHub.',
       tags: ['Javascript', 'Vue.js', 'HTML5', 'CSS3', 'SASS', 'Bootstrap', 'Git', 'Sourcetree', 'Azure', 'Quasar', 'Flutter']
     },
     {
