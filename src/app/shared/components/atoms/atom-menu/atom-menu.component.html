@@ -1,11 +1,9 @@
 <section class="o-menu" [class.o-menu--open]="showMenu">
   <h2 class="o-menu__title">Bem-vindo ao meu Portfólio :)</h2>
   <nav class="o-menu__nav">
-    <a class="o-menu__nav__link" routerLink="/" fragment="about">Sobre</a>
-    <a class="o-menu__nav__link" routerLink="/" fragment="experiences">Experiência</a>
-    <a class="o-menu__nav__link" href="#">Formação</a>
-    <a class="o-menu__nav__link" href="#">Habilidades</a>
-    <a class="o-menu__nav__link" href="#">Projetos</a>
-    <a class="o-menu__nav__link" href="#">Contato</a>
+    <a class="o-menu__nav__link" (click)="scrollTo('about')">Sobre</a>
+    <a class="o-menu__nav__link" (click)="scrollTo('experiences')">Experiência</a>
+    <a class="o-menu__nav__link" (click)="scrollTo('projects')">Projetos</a>
+    <a class="o-menu__nav__link" (click)="scrollTo('contact')">Contato</a>
   </nav>
 </section>

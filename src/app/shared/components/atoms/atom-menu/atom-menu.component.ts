@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'atom-menu',
   standalone: true,
@@ -9,4 +9,12 @@ import { Component, Input } from '@angular/core';
 })
 export class AtomMenuComponent {
   @Input() showMenu: boolean = false;
+
+  constructor(
+    private viewportScroller: ViewportScroller
+  ) {}
+
+  scrollTo(sectionId: string): void {
+    this.viewportScroller.scrollToAnchor(sectionId);
+  }
 }

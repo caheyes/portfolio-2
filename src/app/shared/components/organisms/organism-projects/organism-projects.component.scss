@@ -14,7 +14,7 @@
       gap: 30px;
     }
 
-    h3 {
+    &__title {
       @include font-title(42, 'FiraSans-Bold', $black);
 
       @media (min-width: $tablet) {
@@ -26,6 +26,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
