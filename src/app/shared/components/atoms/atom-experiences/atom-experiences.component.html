@@ -2,8 +2,8 @@
   @for(experience of listExperiences(); track experience;) {
   <div class="a-experiences__experience">
     <p class="a-experiences__experience__time">{{experience.time}}</p>
-    <h3 class="a-experiences__experience__title">{{experience.title}}</h3>
-    <h3 class="a-experiences__experience__title">{{experience.position}}</h3>
+    <h4 class="a-experiences__experience__title">{{experience.title}}</h4>
+    <h4 class="a-experiences__experience__title">{{experience.position}}</h4>
     <p class="a-experiences__experience__description">{{experience.description}}</p>
     <div class="a-experiences__experience__tags">
       @for(tag of experience.tags; track tag;) {

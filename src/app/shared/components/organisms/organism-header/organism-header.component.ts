@@ -19,7 +19,7 @@ export class OrganismHeaderComponent implements OnInit {
 
   public scrolled = false;
   public showMenu = false;
-  public darkMode = false;
+  public darkMode = true;
 
   constructor(
     private darkModeService: DarkModeService,
@@ -31,7 +31,7 @@ export class OrganismHeaderComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.darkModeService.darkMode$.subscribe((isDark) => {
         this.darkMode = isDark;
-        document.body.classList.toggle('dark-mode', isDark);
+        document.body.classList.toggle('darkmode', isDark);
       })
     }
   }
